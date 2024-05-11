@@ -10,10 +10,9 @@ for (i = 0; i < myNodelist.length; i++) {
 }
 
 // Click on a close button to hide the current list item
-var closeButtons = document.getElementsByClassName("close"); // Changed variable name to closeButtons
-var i;
-for (i = 0; i < closeButtons.length; i++) {
-  closeButtons[i].onclick = function() {
+var close = document.getElementsByClassName("close");
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
     var div = this.parentElement;
     div.style.display = "none";
   }
