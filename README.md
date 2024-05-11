@@ -1,4 +1,3 @@
-# Web-Based-Checklist
 # Overview
 
 The goal of this software is to provide users with a convenient and efficient way to manage their tasks, improve productivity, and stay organized. The list may change and things simplified as I continue to work on this project, but this is what I think I can accomplish at this time.
@@ -23,4 +22,5 @@ The programming languages used are Javascript, CSS, and HTML.
 # Useful Websites
 
 * [W3Schools](https://www.w3schools.com/js/)
+* [W3Schools How To Create a To Do List](https://www.w3schools.com/howto/howto_js_todolist.asp)
 * [GreatStack's To-Do List Tutorial](https://www.youtube.com/watch?v=G0jO8kUrg-I)

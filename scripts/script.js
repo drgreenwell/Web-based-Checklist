@@ -1,58 +1,55 @@
-// script.js
-let lists = [];
+// Create a "close" button and append it to each list item
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
 
-function createList() {
-    const listName = prompt("Enter list name:");
-    if (listName) {
-        const newList = { name: listName, tasks: [] };
-        lists.push(newList);
-        renderLists();
+// Click on a close button to hide the current list item
+var closeButtons = document.getElementsByClassName("close"); // Changed variable name to closeButtons
+var i;
+for (i = 0; i < closeButtons.length; i++) {
+  closeButtons[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+// Add a "checked" symbol when clicking on a list item
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
     }
+  }
 }
-
-function addTask(listIndex) {
-    const taskTitle = prompt("Enter task title:");
-    if (taskTitle) {
-        const taskDescription = prompt("Enter task description:");
-        const dueDate = prompt("Enter due date:");
-        const priority = prompt("Enter priority (high/medium/low):");
-        const newTask = { title: taskTitle, description: taskDescription, dueDate: dueDate, priority: priority, completed: false };
-        lists[listIndex].tasks.push(newTask);
-        renderLists();
-    }
-}
-
-function toggleTaskCompletion(listIndex, taskIndex) {
-    lists[listIndex].tasks[taskIndex].completed = !lists[listIndex].tasks[taskIndex].completed;
-    renderLists();
-}
-
-function renderLists() {
-    const listsContainer = document.getElementById("lists");
-    listsContainer.innerHTML = "";
-    lists.forEach((list, listIndex) => {
-        const listDiv = document.createElement("div");
-        listDiv.classList.add("list");
-        listDiv.innerHTML = `<h2>${list.name}</h2>`;
-        list.tasks.forEach((task, taskIndex) => {
-            const taskDiv = document.createElement("div");
-            taskDiv.classList.add("task");
-            if (task.completed) {
-                taskDiv.classList.add("complete");
-            }
-            taskDiv.innerHTML = `
-                <input type="checkbox" onchange="toggleTaskCompletion(${listIndex}, ${taskIndex})" ${task.completed ? 'checked' : ''}>
-                <strong>${task.title}</strong> - ${task.description} - Due: ${task.dueDate} - Priority: ${task.priority}
-            `;
-            listDiv.appendChild(taskDiv);
-        });
-        const addTaskButton = document.createElement("button");
-        addTaskButton.textContent = "Add Task";
-        addTaskButton.onclick = () => addTask(listIndex);
-        listDiv.appendChild(addTaskButton);
-        listsContainer.appendChild(listDiv);
-    });
-}
-
-// Initial render
-renderLists();
