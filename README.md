@@ -22,3 +22,9 @@ The programming languages used are Javascript, CSS, and HTML.
 * [W3Schools](https://www.w3schools.com/js/)
 * [W3Schools How To Create a To Do List](https://www.w3schools.com/howto/howto_js_todolist.asp)
 * [GreatStack's To-Do List Tutorial](https://www.youtube.com/watch?v=G0jO8kUrg-I)
+
+# Future Work
+
+- Impliment a way to save lists to the user's browser and create an upload/download method to share lists between computers.
+- Impliment a Task Priority system to organize tasks from high to low priority.
+- Impliment a Reminders and Notification system that ensures that deadlines are not missed.
