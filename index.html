@@ -8,20 +8,17 @@
 </head>
 <body>
 
-<div id="myDIV" class="header">
-  <h2 style="margin:5px">My To Do List</h2>
-  <input type="text" id="myInput" placeholder="Title...">
-  <span onclick="newElement()" class="addBtn">Add</span>
-</div>
+  <div class="header">
+    <h2 class="title">My To Do Lists</h2>
+    <div class="add-list-container">
+      <input type="text" id="listNameInput" placeholder="Enter List Name...">
+      <span onclick="newList()" class="addBtn"><img src="images/add-icon.png" alt="Add List"></span>
+    </div>
+  </div>
 
-<ul id="myUL">
-  <li>Hit the gym</li>
-  <li class="checked">Pay bills</li>
-  <li>Meet George</li>
-  <li>Buy eggs</li>
-  <li>Read a book</li>
-  <li>Organize office</li>
-</ul>
+<div id="listsContainer">
+  <!-- To-Do Lists will be generated here -->
+</div>
 
 <script src="scripts/scripts.js"></script>
 
