@@ -9,7 +9,7 @@ Key features of the software will include:
 
 Here is the walkthrough for the software:
 
-["Web-Based Checklist" Demo Video]()
+["Web-Based Checklist" Demo Video](https://youtu.be/QaLEUlAIGBU)
 
 # Development Environment
 
