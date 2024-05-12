@@ -13,7 +13,7 @@ Here is the walkthrough for the software:
 
 # Development Environment
 
-Visual Studio Code is used in the creation of this software.
+Visual Studio Code was used in the creation of this software.
 
 The programming languages used are Javascript, CSS, and HTML.
 
