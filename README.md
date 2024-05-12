@@ -1,6 +1,6 @@
 # Overview
 
-The goal of this software is to provide users with a convenient and efficient way to manage their tasks, improve productivity, and stay organized. The list may change and things simplified as I continue to work on this project, but this is what I think I can accomplish at this time.
+The goal of this software is to provide users with a convenient and efficient way to manage their tasks, improve productivity, and stay organized.
 
 Key features of the software will include:
 1.	Task Creation and Editing: Users can add new tasks with titles, descriptions, due dates, and priority levels. They can also edit existing tasks to update details or make changes.
